@@ -18,8 +18,8 @@ var TabletaNav = React.createClass({
   	},
 	render: function(){
 		return(
-			<div>
-				<ul>
+			<div className="tableta">
+				<ul className="tabletaNav">
 					{this.renderChildren()}
 				</ul>
 				<div className={this.props.contName}>

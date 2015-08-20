@@ -23,7 +23,7 @@ var Tab = React.createClass({
 	},
 	render: function(){
 		return(
-			<li className={this.state.activeClass}><a onClick={this.handleClick}>{this.props.name}</a></li>
+			<li className={this.state.activeClass} id={this.props.name}><a onClick={this.handleClick}>{this.props.name}</a></li>
 		);
 	}
 });
