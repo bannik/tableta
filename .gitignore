@@ -1,0 +1,12 @@
+node_modules
+node_modules/*
+__MACOSX
+.DS_Store
+.cache
+.cache/*
+.DS_Store?
+.Trashes
+.Spotlight-V100
+Thumbs.db
+Icon?
+npm-debug.log
