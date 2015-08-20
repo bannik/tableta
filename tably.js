@@ -6,13 +6,6 @@ var Tab = React.createClass({
 			activeClass: false
 		});
 	},
-	handleClick: function(e){
-		var _this = this;
-		e.preventDefault();
-		$(_this).parent().addClass('active');
-		$(_this).parent().siblings().removeClass("active");
-        $('.'+this.props.contName).html(this.props.content);
-	},
 	componentDidMount: function(){
 		if(this.props.active == true){
 			this.setState({activeClass: true});

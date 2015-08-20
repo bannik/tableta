@@ -1,28 +1,41 @@
 var React = require('react');
-var Tab = require('./tab.js');
+var Tably = require('./tably.js');
 
-var cloneWithProps = require('react-addons-clone-with-props');
 
 var TabletaNav = React.createClass({
+	getInitialState: function(){
+		var things = _this.props.children.map(function(item) {
+         	return (
+         		<li className={item.props.active} key={item.props.name} onClick={_this.handleClick.bind(_this, item)} id={item.props.name}>{item}</li>
+         	);
+        });
+		return({
+			content: this.props.children[0],
+			activeClass: '',
+			tabs: things
+		});
+	},
+	handleClick: function(item){
+		var _this = this;
+		$(this).addClass('active');
+		$(this).siblings().removeClass("active");
+		_this.setState({content: item.props.children});
+		console.warn(this.state.content);
+	},
+	componentWillMount: function(){
+	},
 	componentDidMount: function(){
-		var things = React.Children.map(this.props.children);
 
 	},
-	renderChildren: function () {
-		var _this = this;
-	    return (
-	    	_this.props.children.map(function(item) {
-	         	return <Tab name={item.props.name} key={item.props.name} contName={_this.props.contName} content={item.props.children} active={item.props.active}/>
-	        })
-	    );
-  	},
 	render: function(){
+        console.warn(this.state.tabs);
 		return(
-			<div>
-				<ul>
-					{this.renderChildren()}
+			<div className="tableta">
+				<ul className="tabletaNav">
+					{this.state.tabs}
 				</ul>
 				<div className={this.props.contName}>
+					{this.state.content}
 				</div>
 			</div>
 		);

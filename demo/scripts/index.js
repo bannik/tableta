@@ -2,16 +2,22 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var Tableta = require('./tableta.js');
-var Tab = require('./tab.js');
-
+var Tab = require('./tably.js');
+var Component = React.createClass({
+	render: function(){
+		return(
+			<span>Unicorn</span>
+		)
+	}
+});
 var App = React.createClass({
 
 	render: function(){
 		return(
 			<div>
 				<Tableta contName="hoe">
-					<Tab name="fuck" active={true} >
-						some content
+					<Tab name="fuck" active="active">
+						<Component />
 					</Tab>
 					<Tab name="fuck2">
 						some content2
