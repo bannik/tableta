@@ -25,3 +25,13 @@ So your file should look something like this right now:
 ```
 var tableta = require('/path/to/tableta.js');
 var tab = require('/path/to/tab.js');
+```
+
+Ok so right now you have to use two components to make your tabs working. We have component tabketa which is our main component and has only one property which is called contName and it is the name of your choice for the class your content container will get.
+
+So we start like this:
+
+```
+<tableta contName="content">
+</tableta>
+```
