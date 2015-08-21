@@ -7,7 +7,7 @@ var TabletaNav = React.createClass({
 		var _this = this;
 		var tabs = _this.props.children.map(function(item) {
          	return (
-         		<li key={item.props.name} onClick={_this.handleClick.bind(_this, item)} id={item.props.name}>{item}</li>
+         		<li key={item.props.name} onClick={_this.handleClick.bind(_this, item)} id={item.props.name.replace(' ','')}>{item}</li>
          	);
         });
         for (var i = this.props.children.length - 1; i >= 0; i--) {
@@ -17,15 +17,15 @@ var TabletaNav = React.createClass({
         };
 		return({
 			content: activeEl.props.children,
-			activeClass: activeEl.props.name,
+			activeClass: activeEl.props.name.replace(' ',''),
 			tabs: tabs
 		});
 	},
 	handleClick: function(item){
 		var _this = this;
 		$('#'+_this.state.activeClass).removeClass('active');
-		$('#'+item.props.name).addClass('active')
-		_this.setState({content: item.props.children, activeClass: item.props.name});
+		$('#'+item.props.name.replace(' ','')).addClass('active');
+		_this.setState({content: item.props.children, activeClass: item.props.name.replace(' ','')});
 	},
 	componentDidMount: function(){
 		var _this = this;
