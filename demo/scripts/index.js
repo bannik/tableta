@@ -16,17 +16,17 @@ var App = React.createClass({
 		return(
 			<div>
 				<Tableta contName="hoe">
-					<Tab name="fuck" active="active">
+					<Tab name="Unicorn" active="active">
 						<Component />
 					</Tab>
-					<Tab name="fuck2">
-						some content2
+					<Tab name="Zebra">
+						Some zebras are nice
 					</Tab>
-					<Tab name="fuck3">
-						some content3
+					<Tab name="Doggy">
+						its so fluffy
 					</Tab>
-					<Tab name="fuck4">
-						some content4
+					<Tab name="Snoop Dog">
+						Doggy dog
 					</Tab>
 				</Tableta>
 			</div>
