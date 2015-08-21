@@ -13,6 +13,8 @@ var TabletaNav = React.createClass({
         for (var i = this.props.children.length - 1; i >= 0; i--) {
         	if(this.props.children[i].props.active == 'active'){
         		var activeEl = this.props.children[i];
+        	}else{
+        		var activeEl = this.props.children[0];
         	}
         };
 		return({
