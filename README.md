@@ -18,6 +18,7 @@ open http://localhost:3000
 
 ```
 react@0.14.0-beta3
+react-dom@0.14.0-beta3
 ```
 
 
