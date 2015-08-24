@@ -5,6 +5,7 @@ var Tably = require('./tably.js');
 var TabletaNav = React.createClass({
 	getInitialState: function(){
 		var _this = this;
+		var count = 0;
 		var tabs = _this.props.children.map(function(item) {
          	return (
          		<li key={item.props.name} onClick={_this.handleClick.bind(_this, item)} id={item.props.name.replace(' ','')}>{item}</li>

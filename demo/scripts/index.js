@@ -16,7 +16,7 @@ var App = React.createClass({
 		return(
 			<div>
 				<Tableta contName="hoe">
-					<Tab name="Unicorn" active="active">
+					<Tab image="some" name="Unicorn" active="active">
 						<Component />
 					</Tab>
 					<Tab name="Zebra">
